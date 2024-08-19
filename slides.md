@@ -47,8 +47,52 @@ Mit Rapid Prototyping und API-First agil zum Ziel ;P
 # Annahmen zur fachlichen Umsetzung
 Was nicht explizit in der Aufgabenstellung stand
 
-- Abfrage der Uhrzeit mit HTTP-GET Request an REST-Schnittstelle
+- Abfrage der Uhrzeit mittels HTTP-GET Request an REST-Schnittstelle
 - Rückgabe der aktuellen Uhrzeit zum Zeitpunkt des Aufrufs
 - Optionale Angabe von:
   - **Datumsformat** - Default Value: "*yyyy-MM-dd'T'HH:mm:ss*"
   - **Zeitzone** - Default Value: *Greenwich Mean Time (GMT)*
+
+---
+
+# Technologie-Stack
+
+| ***Aspekt***                     | ***Entscheidung*** |
+|----------------------------------|--------------------|
+| Programmiersprache               | Java & Spring Boot |
+| Build Tool                       | Maven              |
+| API-Dokumentation & -Generierung | Swagger / OpenApi  |
+| Quellcode Hosting                | GitHub             |
+| Cloud-Plattform                  | Heroku             |
+| Präsentationssoftware            | Slidev             |
+
+---
+
+# REST-API
+
+
+---
+
+# Deployment
+
+
+---
+
+# Implementierung
+
+
+---
+
+# Live-Demo
+
+<iframe width=100% height=80% src="live-demo.html"></iframe>
+
+---
+
+# Links
+
+- GitHub Repositories
+  - **API-Definition:** *https://github.com/sourcefranke/clock-service-demo-api*
+  - **Implementierung:** *https://github.com/sourcefranke/clock-service-demo-impl*
+  - **Präsentation:** *https://github.com/sourcefranke/prototyping-apifirst-session*
+- **Doku REST-API (Swagger UI):** *https://sourcefranke.github.io/clock-service-demo-api/*
