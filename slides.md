@@ -770,7 +770,7 @@ paths:
 Swagger UI
 
 <div class="flex justify-center">
-    <img width="60%" src="/REST.PNG" />
+    <img width="60%" src="/rest.png" />
 </div>
 
 
@@ -1027,13 +1027,13 @@ public class WebConfig implements WebMvcConfigurer {
 
 <div class="flex flex-col gap-5" style="height: 300px">
   <div class="flex justify-around">
-    <img width="30%" src="/swagger.PNG">
-    <img width="30%" src="/github_pages.PNG">
+    <img width="30%" src="/swagger.png">
+    <img width="30%" src="/github_pages.png">
   </div>
   
   <div class="flex justify-around">
-    <img width="14%" src="/spring-boot.PNG">
-    <img width="15%" src="/heroku.PNG">
+    <img width="14%" src="/spring-boot.png">
+    <img width="15%" src="/heroku.png">
   </div>
 </div>
 
