@@ -694,5 +694,5 @@ paths:
 Swagger UI
 
 <div class="flex justify-center">
-    <img width="60%" src="REST.PNG" />
+    <img width="60%" src="/REST.PNG" />
 </div>

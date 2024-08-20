@@ -86,13 +86,13 @@ src: pages/implementierung.md
 
 <div class="flex flex-col gap-5" style="height: 300px">
   <div class="flex justify-around">
-    <img width="30%" src="swagger.PNG">
-    <img width="30%" src="github_pages.PNG">
+    <img width="30%" src="/swagger.PNG">
+    <img width="30%" src="/github_pages.PNG">
   </div>
   
   <div class="flex justify-around">
-    <img width="14%" src="spring-boot.PNG">
-    <img width="15%" src="heroku.PNG">
+    <img width="14%" src="/spring-boot.PNG">
+    <img width="15%" src="/heroku.PNG">
   </div>
 </div>
 
