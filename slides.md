@@ -154,6 +154,26 @@ Swagger UI
 
 ---
 
+# Deployment
+
+<div class="flex flex-col gap-5" style="height: 300px">
+  <div class="flex justify-around">
+    <img width="30%" src="/swagger.png">
+    <img width="30%" src="/github_pages.png">
+  </div>
+
+  <div class="flex justify-around">
+    <img width="14%" src="/spring-boot.png">
+    <img width="15%" src="/heroku.png">
+  </div>
+</div>
+
+<Arrow x1="405" y1="200" x2="570" y2="200" />
+<Arrow x1="335" y1="400" x2="635" y2="400" />
+
+
+---
+
 # Implementierung
 Maven "pom.xml" (Ausschnitt)
 
@@ -182,49 +202,6 @@ Maven "pom.xml" (Ausschnitt)
         </execution>
     </executions>
 </plugin>
-```
-
-</div>
-
-
----
-
-# Implementierung
-Java
-
-<div class="flex justify-center" style="width: 100%; height: 400px">
-
-```java
-@SpringBootApplication
-public class Application {
-
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
-
-}
-```
-
-</div>
-
-
----
-
-# Implementierung
-Java
-
-<div class="flex justify-center" style="width: 100%; height: 400px">
-
-```java
-@Configuration
-@EnableWebMvc
-public class WebConfig implements WebMvcConfigurer {
-
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**");
-    }
-}
 ```
 
 </div>
@@ -269,22 +246,42 @@ public class TimeApiDelegateImpl implements TimeApiDelegate {
 
 ---
 
-# Deployment
+# Implementierung
+Java
 
-<div class="flex flex-col gap-5" style="height: 300px">
-  <div class="flex justify-around">
-    <img width="30%" src="/swagger.png">
-    <img width="30%" src="/github_pages.png">
-  </div>
-  
-  <div class="flex justify-around">
-    <img width="14%" src="/spring-boot.png">
-    <img width="15%" src="/heroku.png">
-  </div>
+<div class="flex justify-around">
+<div class="flex justify-center" style="width: 100%; height: 400px">
+
+```java
+@SpringBootApplication
+public class Application {
+
+    public static void main(String[] args) {
+        SpringApplication.run(Application.class, args);
+    }
+
+}
+```
+
 </div>
 
-<Arrow x1="405" y1="200" x2="570" y2="200" />
-<Arrow x1="335" y1="400" x2="635" y2="400" />
+<div class="flex justify-center" style="width: 100%; height: 400px">
+
+```java
+@Configuration
+@EnableWebMvc
+public class WebConfig implements WebMvcConfigurer {
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**");
+    }
+}
+```
+
+</div>
+</div>
+
 
 ---
 
