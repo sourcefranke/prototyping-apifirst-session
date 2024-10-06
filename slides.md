@@ -239,9 +239,38 @@ layout: section
 # PDCA-Zyklus
 Die Mutter aller agilen Vorgehensmodelle!
 
+<div class="flex justify-center mt-10">
+
 ```mermaid {scale: 1.3}
 flowchart LR
     Plan ---> Do ---> Check ---> Act ---> Plan
 ```
+</div>
 
+<div class="grid grid-cols-4 gap-4 mt-15">
+  <div class="flex flex-col items-center">
+    <h2>Plan</h2>
+    <ul class="text-sm mt-3">
+      <li>Nächste Schritte definieren</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h2>Do</h2>
+    <ul class="text-sm mt-3">
+      <li>Schritte ausführen</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h2>Check</h2>
+    <ul class="text-sm mt-3">
+      <li>Erfolg bewerten</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h2>Act</h2>
+    <ul class="text-sm mt-3">
+      <li>Anpassungen definieren</li>
+    </ul>
+  </div>
+</div>
 
