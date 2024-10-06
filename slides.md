@@ -13,9 +13,8 @@ drawings:
 mdc: true
 ---
 
-# Ein Uhrzeit-Server
-
-Mit Rapid Prototyping und API-First agil zum Ziel ;P
+# Rapid Prototyping in Action
+Ein Erfahrungsaustausch
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -24,16 +23,24 @@ Mit Rapid Prototyping und API-First agil zum Ziel ;P
 </div>
 
 <div class="abs-br m-6 flex gap-2 items-baseline opacity-50">
-    <span class="text-xs">(c) 2024 Lukas Tietenberg - v2024-08-21</span>
+    <span class="text-xs">(c) 2024 Lukas Tietenberg - GPLv3 - v2024-10-12</span>
     <a href="https://github.com/sourcefranke/prototyping-apifirst-session" target="_blank" alt="GitHub" title="Open in GitHub"
         class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
         <carbon-logo-github />
     </a>
 </div>
 
+
+---
+layout: section
 ---
 
-# Aufgabenstellung
+# Letztens im Rahmen eines Vorstellungsgesprächs
+
+
+---
+
+# Programmieraufgabe
 
 <div class="flex justify-center items-center text-4xl" style="height: 80%;">
   <span style="width: 70%;">
@@ -61,21 +68,12 @@ Was nicht explizit in der Aufgabenstellung stand
 
 ---
 
-# Technologie-Stack
-
-| ***Aspekt***                     | ***Entscheidung*** |
-|----------------------------------|--------------------|
-| Programmiersprache               | Java & Spring Boot |
-| Build Tool                       | Maven              |
-| API-Dokumentation & -Generierung | Swagger / OpenApi  |
-| Quellcode Hosting                | GitHub             |
-| Cloud-Plattform                  | Heroku             |
-| Präsentation                     | Slidev             |
-
----
-
 # REST-API
-Definition als .yaml-Datei (Ausschnitt)
+
+<div class="grid grid-cols-2 gap-6">
+<div>
+
+<h3>OpenAPI YML (Ausschnitt)</h3>
 
 <div class="flex justify-center" style="overflow-y: scroll; width: 100%; height: 400px">
 
@@ -141,36 +139,21 @@ paths:
 
 </div>
 </div>
+</div>
+<div>
 
----
-
-# REST-API
-Swagger UI
+<h3>Swagger UI</h3>
 
 <div class="flex justify-center">
-    <img width="60%" src="/rest.png" />
+    <img src="/rest.png" />
 </div>
 
+<p class="text-sm flex justify-end">
 
----
-
-# Deployment
-
-<div class="flex flex-col gap-5" style="height: 300px">
-  <div class="flex justify-around">
-    <img width="30%" src="/swagger.png">
-    <img width="30%" src="/github_pages.png">
-  </div>
-
-  <div class="flex justify-around">
-    <img width="14%" src="/spring-boot.png">
-    <img width="15%" src="/heroku.png">
-  </div>
+Link: https://sourcefranke.github.io/clock-service-demo-api/
+</p>
 </div>
-
-<Arrow x1="405" y1="200" x2="570" y2="200" />
-<Arrow x1="335" y1="400" x2="635" y2="400" />
-
+</div>
 
 ---
 
@@ -245,57 +228,20 @@ public class TimeApiDelegateImpl implements TimeApiDelegate {
 
 
 ---
+layout: section
+---
 
-# Implementierung
-Java
-
-<div class="flex justify-around">
-<div class="flex justify-center" style="width: 100%; height: 400px">
-
-```java
-@SpringBootApplication
-public class Application {
-
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
-
-}
-```
-
-</div>
-
-<div class="flex justify-center" style="width: 100%; height: 400px">
-
-```java
-@Configuration
-@EnableWebMvc
-public class WebConfig implements WebMvcConfigurer {
-
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**");
-    }
-}
-```
-
-</div>
-</div>
+# Vorgehen
 
 
 ---
 
-# Live-Demo
-Eine simple HTML-Seite mit JavaScript als Client 
+# PDCA-Zyklus
+Die Mutter aller agilen Vorgehensmodelle!
 
-<iframe width=100% height=80% src="live-demo.html"></iframe>
+```mermaid {scale: 1.3}
+flowchart LR
+    Plan ---> Do ---> Check ---> Act ---> Plan
+```
 
----
 
-# Links
-
-- GitHub Repositories
-  - **API-Definition:** *https://github.com/sourcefranke/clock-service-demo-api*
-  - **Implementierung:** *https://github.com/sourcefranke/clock-service-demo-impl*
-  - **Präsentation:** *https://github.com/sourcefranke/prototyping-apifirst-session*
-- **Doku REST-API (Swagger UI):** *https://sourcefranke.github.io/clock-service-demo-api/*
