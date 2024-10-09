@@ -35,7 +35,7 @@ Ein Erfahrungsaustausch
 layout: section
 ---
 
-# Letztens im Rahmen eines Vorstellungsgesprächs
+## Letztens im Rahmen eines Vorstellungsgesprächs ...
 
 
 ---
@@ -148,10 +148,9 @@ paths:
     <img src="/rest.png" />
 </div>
 
-<p class="text-sm flex justify-end">
-
+<span class="text-sm flex justify-end">
 Link: https://sourcefranke.github.io/clock-service-demo-api/
-</p>
+</span>
 </div>
 </div>
 
@@ -274,3 +273,85 @@ flowchart LR
   </div>
 </div>
 
+
+---
+
+# Rapid Prototyping vs. Scrum
+
+<div class="grid grid-cols-2 gap-6 mt-20">
+  <div class="flex flex-col items-center">
+    <h2>Prototypen</h2>
+    <ul class="mt-3">
+      <li>Schnelles Herausfinden und Validieren von Anforderungen</li>
+      <li>Kein Anspruch auf eine vollständige oder produktionsreife Software</li>
+    </ul>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <h2>Scrum</h2>
+    <ul class="mt-3">
+      <li>Entwicklung und Auslieferung funktionsfähiger Software</li>
+      <li>Möglichkeit der Reaktion auf veränderte Bedingungen oder Anforderungen</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+# Stufen von Prototypen
+
+<div class="grid grid-cols-2 gap-20 mt-15">
+  <div class="flex flex-col items-center">
+    <h3>1) Wireframe</h3>
+    <ul class="text-sm mt-3">
+      <li>Statische Skizzen für grundlegendes Layout und Struktur</li>
+      <li><b><u>Tool</u>:</b> Figma</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h3>2) Click-Dummy</h3>
+    <ul class="text-sm mt-3">
+      <li>Interaktive Klickmodelle, die Navigation simulieren, aber ohne Backend-Logik</li>
+      <li><b><u>Tool</u>:</b> Figma</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h3>3) Low Function</h3>
+    <ul class="text-sm mt-3">
+      <li>Teilweise funktionsfähige Modelle mit Basisfunktionalität</li>
+      <li><b><u>Tool</u>:</b> HTML, JavaScript</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h3>4) High Function</h3>
+    <ul class="text-sm mt-3">
+      <li>Detailgetreue Prototypen mit umfassender Interaktivität und echtem Design</li>
+      <li><b><u>Tool</u>:</b> Angular / Vue / React, etc.</li>
+    </ul>
+  </div>
+</div>
+
+---
+
+# Zu guter letzt ...
+... dann noch ein Backend Mock dazu
+
+#### package.json
+```json
+{
+  "name": "clock-service-demo-mock",
+  "version": "1.0.0",
+  "description": "A mock server using Prism for demo purposes",
+  "scripts": {
+    "deploy": "prism mock https://sourcefranke.github.io/clock-service-demo-api/swagger/api.yaml --port $PORT --host 0.0.0.0",
+    "local": "prism mock https://sourcefranke.github.io/clock-service-demo-api/swagger/api.yaml --port 8080"
+  },
+  "dependencies": {
+    "@stoplight/prism-cli": "^5.10.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "license": "MIT"
+}
+```
