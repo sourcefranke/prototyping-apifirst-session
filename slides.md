@@ -35,7 +35,7 @@ Ein Erfahrungsaustausch
 layout: section
 ---
 
-## Letztens im Rahmen eines Vorstellungsgesprächs ...
+## Letztens im Rahmen eines Bewerbungsgesprächs ...
 
 
 ---
@@ -52,7 +52,7 @@ layout: section
 
 ---
 
-# Annahmen zur fachlichen Umsetzung
+# Annahmen zur Umsetzung
 Was nicht explizit in der Aufgabenstellung stand
 
 <div class="flex justify-center items-center text-2xl" style="height: 80%">
@@ -148,8 +148,8 @@ paths:
     <img src="/rest.png" />
 </div>
 
-<span class="text-sm flex justify-end">
-Link: https://sourcefranke.github.io/clock-service-demo-api/
+<span class="text-sm flex justify-end mt-2">
+    <a>https://sourcefranke.github.io/clock-service-demo-api/</a>
 </span>
 </div>
 </div>
@@ -230,7 +230,7 @@ public class TimeApiDelegateImpl implements TimeApiDelegate {
 layout: section
 ---
 
-# Vorgehen
+# Persönliche Erkenntnisse
 
 
 ---
@@ -276,14 +276,15 @@ flowchart LR
 
 ---
 
-# Rapid Prototyping vs. Scrum
+# Vorgehen im Vergleich
 
 <div class="grid grid-cols-2 gap-6 mt-20">
   <div class="flex flex-col items-center">
-    <h2>Prototypen</h2>
+    <h2>Rapid Prototyping</h2>
     <ul class="mt-3">
       <li>Schnelles Herausfinden und Validieren von Anforderungen</li>
       <li>Kein Anspruch auf eine vollständige oder produktionsreife Software</li>
+      <li>Mit bewusst wenig Aufwand etwas "Sichtbares" produzieren, um Feedback zu sammeln</li>
     </ul>
   </div>
 
@@ -291,7 +292,7 @@ flowchart LR
     <h2>Scrum</h2>
     <ul class="mt-3">
       <li>Entwicklung und Auslieferung funktionsfähiger Software</li>
-      <li>Möglichkeit der Reaktion auf veränderte Bedingungen oder Anforderungen</li>
+      <li>Möglichkeit der schnellen Reaktion auf veränderte Bedingungen oder Anforderungen während der Entwicklung</li>
     </ul>
   </div>
 </div>
@@ -299,8 +300,9 @@ flowchart LR
 ---
 
 # Stufen von Prototypen
+... ok, im Wesentlichen Frontend
 
-<div class="grid grid-cols-2 gap-20 mt-15">
+<div class="grid grid-cols-2 gap-20 mt-12">
   <div class="flex flex-col items-center">
     <h3>1) Wireframe</h3>
     <ul class="text-sm mt-3">
@@ -332,9 +334,24 @@ flowchart LR
 </div>
 
 ---
+layout: section
+---
 
-# Zu guter letzt ...
-... dann noch ein Backend Mock dazu
+# Und im Backend?
+
+---
+
+# Wir erinnern uns ...
+
+<div class="flex justify-center h-100">
+    <img src="/rest.png" />
+</div>
+
+
+---
+
+# Ein komplett generierter Mock Server
+Mit Prism im Handumdrehen ein Mock Server aus dem Boden gestampft
 
 #### package.json
 ```json
@@ -355,3 +372,13 @@ flowchart LR
   "license": "MIT"
 }
 ```
+
+<span class="text-sm flex justify-end">
+  <a>https://github.com/sourcefranke/clock-service-demo-mock</a>
+</span>
+
+---
+layout: section
+---
+
+# Diskussion !!
