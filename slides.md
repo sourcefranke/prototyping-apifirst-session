@@ -13,9 +13,8 @@ drawings:
 mdc: true
 ---
 
-# Ein Uhrzeit-Server
-
-Mit Rapid Prototyping und API-First agil zum Ziel ;P
+# Rapid Prototyping in Action
+Ein Erfahrungsaustausch
 
 <div class="pt-12">
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
@@ -24,16 +23,24 @@ Mit Rapid Prototyping und API-First agil zum Ziel ;P
 </div>
 
 <div class="abs-br m-6 flex gap-2 items-baseline opacity-50">
-    <span class="text-xs">(c) 2024 Lukas Tietenberg - v2024-08-21</span>
+    <span class="text-xs">(c) 2024 Lukas Tietenberg - GPLv3 - v2024-10-12</span>
     <a href="https://github.com/sourcefranke/prototyping-apifirst-session" target="_blank" alt="GitHub" title="Open in GitHub"
         class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
         <carbon-logo-github />
     </a>
 </div>
 
+
+---
+layout: section
 ---
 
-# Aufgabenstellung
+## Letztens im Rahmen eines Bewerbungsgesprächs ...
+
+
+---
+
+# Programmieraufgabe
 
 <div class="flex justify-center items-center text-4xl" style="height: 80%;">
   <span style="width: 70%;">
@@ -45,7 +52,7 @@ Mit Rapid Prototyping und API-First agil zum Ziel ;P
 
 ---
 
-# Annahmen zur fachlichen Umsetzung
+# Annahmen zur Umsetzung
 Was nicht explizit in der Aufgabenstellung stand
 
 <div class="flex justify-center items-center text-2xl" style="height: 80%">
@@ -61,21 +68,12 @@ Was nicht explizit in der Aufgabenstellung stand
 
 ---
 
-# Technologie-Stack
-
-| ***Aspekt***                     | ***Entscheidung*** |
-|----------------------------------|--------------------|
-| Programmiersprache               | Java & Spring Boot |
-| Build Tool                       | Maven              |
-| API-Dokumentation & -Generierung | Swagger / OpenApi  |
-| Quellcode Hosting                | GitHub             |
-| Cloud-Plattform                  | Heroku             |
-| Präsentation                     | Slidev             |
-
----
-
 # REST-API
-Definition als .yaml-Datei (Ausschnitt)
+
+<div class="grid grid-cols-2 gap-6">
+<div>
+
+<h3>OpenAPI YML (Ausschnitt)</h3>
 
 <div class="flex justify-center" style="overflow-y: scroll; width: 100%; height: 400px">
 
@@ -141,36 +139,20 @@ paths:
 
 </div>
 </div>
+</div>
+<div>
 
----
-
-# REST-API
-Swagger UI
+<h3>Swagger UI</h3>
 
 <div class="flex justify-center">
-    <img width="60%" src="/rest.png" />
+    <img src="/rest.png" />
 </div>
 
-
----
-
-# Deployment
-
-<div class="flex flex-col gap-5" style="height: 300px">
-  <div class="flex justify-around">
-    <img width="30%" src="/swagger.png">
-    <img width="30%" src="/github_pages.png">
-  </div>
-
-  <div class="flex justify-around">
-    <img width="14%" src="/spring-boot.png">
-    <img width="15%" src="/heroku.png">
-  </div>
+<span class="text-sm flex justify-end mt-2">
+    <a>https://sourcefranke.github.io/clock-service-demo-api/</a>
+</span>
 </div>
-
-<Arrow x1="405" y1="200" x2="570" y2="200" />
-<Arrow x1="335" y1="400" x2="635" y2="400" />
-
+</div>
 
 ---
 
@@ -245,57 +227,158 @@ public class TimeApiDelegateImpl implements TimeApiDelegate {
 
 
 ---
+layout: section
+---
 
-# Implementierung
-Java
+# Persönliche Erkenntnisse
 
-<div class="flex justify-around">
-<div class="flex justify-center" style="width: 100%; height: 400px">
 
-```java
-@SpringBootApplication
-public class Application {
+---
 
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
-    }
+# PDCA-Zyklus
+Die Mutter aller agilen Vorgehensmodelle!
 
-}
+<div class="flex justify-center mt-10">
+
+```mermaid {scale: 1.3}
+flowchart LR
+    Plan ---> Do ---> Check ---> Act ---> Plan
 ```
-
 </div>
 
-<div class="flex justify-center" style="width: 100%; height: 400px">
-
-```java
-@Configuration
-@EnableWebMvc
-public class WebConfig implements WebMvcConfigurer {
-
-    @Override
-    public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**");
-    }
-}
-```
-
-</div>
+<div class="grid grid-cols-4 gap-4 mt-15">
+  <div class="flex flex-col items-center">
+    <h2>Plan</h2>
+    <ul class="text-sm mt-3">
+      <li>Nächste Schritte definieren</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h2>Do</h2>
+    <ul class="text-sm mt-3">
+      <li>Schritte ausführen</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h2>Check</h2>
+    <ul class="text-sm mt-3">
+      <li>Erfolg bewerten</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h2>Act</h2>
+    <ul class="text-sm mt-3">
+      <li>Anpassungen definieren</li>
+    </ul>
+  </div>
 </div>
 
 
 ---
 
-# Live-Demo
-Eine simple HTML-Seite mit JavaScript als Client 
+# Vorgehen im Vergleich
 
-<iframe width=100% height=80% src="live-demo.html"></iframe>
+<div class="grid grid-cols-2 gap-6 mt-20">
+  <div class="flex flex-col items-center">
+    <h2>Rapid Prototyping</h2>
+    <ul class="mt-3">
+      <li>Schnelles Herausfinden und Validieren von Anforderungen</li>
+      <li>Kein Anspruch auf eine vollständige oder produktionsreife Software</li>
+      <li>Mit bewusst wenig Aufwand etwas "Sichtbares" produzieren, um Feedback zu sammeln</li>
+    </ul>
+  </div>
+
+  <div class="flex flex-col items-center">
+    <h2>Scrum</h2>
+    <ul class="mt-3">
+      <li>Entwicklung und Auslieferung funktionsfähiger Software</li>
+      <li>Möglichkeit der schnellen Reaktion auf veränderte Bedingungen oder Anforderungen während der Entwicklung</li>
+    </ul>
+  </div>
+</div>
 
 ---
 
-# Links
+# Stufen von Prototypen
+... ok, im Wesentlichen Frontend
 
-- GitHub Repositories
-  - **API-Definition:** *https://github.com/sourcefranke/clock-service-demo-api*
-  - **Implementierung:** *https://github.com/sourcefranke/clock-service-demo-impl*
-  - **Präsentation:** *https://github.com/sourcefranke/prototyping-apifirst-session*
-- **Doku REST-API (Swagger UI):** *https://sourcefranke.github.io/clock-service-demo-api/*
+<div class="grid grid-cols-2 gap-20 mt-12">
+  <div class="flex flex-col items-center">
+    <h3>1) Wireframe</h3>
+    <ul class="text-sm mt-3">
+      <li>Statische Skizzen für grundlegendes Layout und Struktur</li>
+      <li><b><u>Tool</u>:</b> Figma</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h3>2) Click-Dummy</h3>
+    <ul class="text-sm mt-3">
+      <li>Interaktive Klickmodelle, die Navigation simulieren, aber ohne Backend-Logik</li>
+      <li><b><u>Tool</u>:</b> Figma</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h3>3) Low Function</h3>
+    <ul class="text-sm mt-3">
+      <li>Teilweise funktionsfähige Modelle mit Basisfunktionalität</li>
+      <li><b><u>Tool</u>:</b> HTML, JavaScript</li>
+    </ul>
+  </div>
+  <div class="flex flex-col items-center">
+    <h3>4) High Function</h3>
+    <ul class="text-sm mt-3">
+      <li>Detailgetreue Prototypen mit umfassender Interaktivität und echtem Design</li>
+      <li><b><u>Tool</u>:</b> Angular / Vue / React, etc.</li>
+    </ul>
+  </div>
+</div>
+
+---
+layout: section
+---
+
+# Und im Backend?
+
+---
+
+# Wir erinnern uns ...
+
+<div class="flex justify-center h-100">
+    <img src="/rest.png" />
+</div>
+
+
+---
+
+# Ein komplett generierter Mock Server
+Mit Prism im Handumdrehen ein Mock Server aus dem Boden gestampft
+
+#### package.json
+```json
+{
+  "name": "clock-service-demo-mock",
+  "version": "1.0.0",
+  "description": "A mock server using Prism for demo purposes",
+  "scripts": {
+    "deploy": "prism mock https://sourcefranke.github.io/clock-service-demo-api/swagger/api.yaml --port $PORT --host 0.0.0.0",
+    "local": "prism mock https://sourcefranke.github.io/clock-service-demo-api/swagger/api.yaml --port 8080"
+  },
+  "dependencies": {
+    "@stoplight/prism-cli": "^5.10.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "license": "MIT"
+}
+```
+
+<span class="text-sm flex justify-end">
+  <a>https://github.com/sourcefranke/clock-service-demo-mock</a>
+</span>
+
+---
+layout: section
+---
+
+# Diskussion !!
