@@ -16,7 +16,11 @@ mdc: true
 # Rapid Prototyping in Action
 Ein Erfahrungsaustausch
 
-<div class="pt-12">
+<div class="grid grid-cols-3 gap-4 pt-12">
+  <div class="flex flex-col items-center">
+    <h4>Link zu Präsentation</h4>
+    <img src="/qr-code.png" class="h-50 w-50" />
+  </div>
   <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
     Press Space for next page <carbon:arrow-right class="inline"/>
   </span>
@@ -145,12 +149,15 @@ paths:
 <h3>Swagger UI</h3>
 
 <div class="flex justify-center">
-    <img src="/rest.png" />
+    <img src="/rest.png" class="h-70" />
 </div>
 
-<span class="text-sm flex justify-end mt-2">
-    <a>https://sourcefranke.github.io/clock-service-demo-api/</a>
-</span>
+<div class="text-sm flex justify-end mt-2">
+    <a target="_blank" href="https://sourcefranke.github.io/clock-service-demo-api/">
+        https://sourcefranke.github.io/clock-service-demo-api/
+    </a>
+    <img src="/qr-demo-api.png" class="h-30 w-30" />
+</div>
 </div>
 </div>
 
@@ -159,8 +166,8 @@ paths:
 # Implementierung
 Maven "pom.xml" (Ausschnitt)
 
-<div class="flex justify-center" style="overflow: scroll; width: 100%; height: 400px">
-
+<div class="grid grid-cols-3 gap-2 h-90">
+<div class="col-span-2" style="overflow: scroll;">
 ```xml
 <plugin>
     <groupId>org.openapitools</groupId>
@@ -185,7 +192,13 @@ Maven "pom.xml" (Ausschnitt)
     </executions>
 </plugin>
 ```
-
+</div>
+<div class="text-sm flex flex-col justify-end items-end gap-5">
+    <img src="/qr-demo-impl.png" class="h-30 w-30" />
+    <a target="_blank" href="https://github.com/sourcefranke/clock-service-demo-impl/">
+        https://github.com/sourcefranke/clock-service-demo-impl
+    </a>
+</div>
 </div>
 
 
@@ -343,10 +356,18 @@ layout: section
 
 # Wir erinnern uns ...
 
-<div class="flex justify-center h-100">
+<div class="grid grid-cols-7 mt-10">
+<div class="flex justify-center col-span-4 h-90">
     <img src="/rest.png" />
 </div>
 
+<div class="text-sm col-span-3 flex flex-col justify-end items-end gap-2">
+    <img src="/qr-demo-api.png" class="h-30 w-30" />
+    <a target="_blank" href="https://sourcefranke.github.io/clock-service-demo-api/">
+        https://sourcefranke.github.io/clock-service-demo-api/
+    </a>
+</div>
+</div>
 
 ---
 
@@ -354,6 +375,10 @@ layout: section
 Mit Prism im Handumdrehen ein Mock Server aus dem Boden gestampft
 
 #### package.json
+
+<div class="grid grid-cols-8 gap-2">
+<div class="col-span-7">
+
 ```json
 {
   "name": "clock-service-demo-mock",
@@ -372,13 +397,24 @@ Mit Prism im Handumdrehen ein Mock Server aus dem Boden gestampft
   "license": "MIT"
 }
 ```
-
-<span class="text-sm flex justify-end">
-  <a>https://github.com/sourcefranke/clock-service-demo-mock</a>
-</span>
+</div>
+<div class="text-sm flex justify-end items-end">
+  <img src="/qr-demo-mock.png" class="h-25 w-25" />
+</div>
+</div>
+<div class="text-sm flex justify-end items-end">
+    <a target="_blank" href="https://github.com/sourcefranke/clock-service-demo-mock">
+        https://github.com/sourcefranke/clock-service-demo-mock
+    </a>
+</div>
 
 ---
 layout: section
 ---
 
 # Diskussion !!
+
+<div class="flex flex-col items-center">
+  <h5>(Link zu Präsentation)</h5>
+  <img src="/qr-code.png" class="h-30 w-30" />
+</div>
